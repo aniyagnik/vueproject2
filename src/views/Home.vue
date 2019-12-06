@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1> HOME </h1>
+    {{ characterCount }} <br>
     <button class="btn btn-primary"  @click="toogleAnimeForm">Add new Character</button> <br> <br><br><br>
      <div>
       <b-form @submit.prevent="handleSubmit" @reset="handleReset" v-if="showAnimeForm">
@@ -38,7 +39,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'home',
   data () {
@@ -50,6 +51,11 @@ export default {
         age: 12
       }
     }
+  },
+  computed: {
+    ...mapGetters([
+      'characterCount'
+    ])
   },
   methods: {
     ...mapActions([
