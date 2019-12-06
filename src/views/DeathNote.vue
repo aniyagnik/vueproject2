@@ -10,12 +10,15 @@
 </template>
 
 <script>
-import DeathNote from '@/data/DeathNote'
+import { mapState } from 'vuex'
 export default {
   data () {
-    return {
-      DeathNote
-    }
+    return {}
+  },
+  computed: {
+    ...mapState([
+      'DeathNote'
+    ])
   }
 }
 </script>
