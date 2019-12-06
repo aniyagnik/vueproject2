@@ -10,16 +10,13 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import DBZ from '@/data/DBZ'
 
 export default {
   data () {
-    return {}
-  },
-  computed: {
-    ...mapState([
-      'DBZ'
-    ])
+    return {
+      DBZ
+    }
   }
 }
 </script>
