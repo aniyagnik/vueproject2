@@ -30,7 +30,7 @@ const routes = [
     component: Anime
   },
   {
-    path: '/Character/:id',
+    path: '/Character/:anime/:name',
     name: 'Character',
     component: Character
   }

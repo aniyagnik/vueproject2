@@ -2,8 +2,8 @@
   <div>
       <h1>Death Note's Characters</h1>
     <b-table striped hover :items="DeathNote">
-      <template v-slot:cell(first_name)="data">
-        <a :href="`/Character/:${data.value}`">{{ data.value }}</a>
+      <template v-slot:cell(name)="data">
+        <a :href="`/Character/DeathNote/${data.value}`">{{ data.value }}</a>
       </template>
     </b-table>
   </div>
