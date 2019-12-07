@@ -1,8 +1,13 @@
 <template>
     <div>
        <h1>{{ TeamPlayer.name }} from {{this.$route.params.Team}}</h1>
-       <p>Player's Age : {{ TeamPlayer.age }}</p>
-       <p>{{ TeamPlayer.last_name }}</p>
+       <h3>Personal Info</h3>
+       <p>Born :  {{ TeamPlayer.Born }}</p>
+       <p>Birth Place : {{ TeamPlayer.BirthPlace }}</p>
+       <p>height : {{ TeamPlayer.Height }}</p>
+       <p>Role : {{ TeamPlayer.Role }}</p>
+       <p>Batting Style : {{ TeamPlayer.BattingStyle }}</p>
+       <p>Bowling Style : {{ TeamPlayer.BowlingStyle }}</p>
     </div>
 </template>
 

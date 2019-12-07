@@ -5,14 +5,18 @@ export default {
   IndianPlayersSummary: (state) => {
     return state.India.map(obj => {
       return {
-        name: obj.name
+        name: obj.name,
+        role: obj.Role,
+        team: obj.team
       }
     })
   },
   AustralianPlayersSummary: (state) => {
     return state.Australia.map(obj => {
       return {
-        name: obj.name
+        name: obj.name,
+        role: obj.Role,
+        team: obj.team
       }
     })
   }

@@ -5,30 +5,80 @@
     <button class="btn btn-primary"  @click="toogleTeamForm">Add new Player</button> <br> <br><br><br>
      <div>
       <b-form @submit.prevent="handleSubmit" @reset="handleReset" v-if="showTeamForm">
-        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+        <b-form-group id="input-group-1" label="Name:" label-for="input-1">
           <b-form-input
-            id="input-2"
+            id="input-1"
             v-model="form.name"
             required
             placeholder="Enter name"
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-3" label="Team:" label-for="input-3">
-          <b-form-select
+        <b-form-group id="input-group-2" label="Birth Place :" label-for="input-2">
+          <b-form-input
+            id="input-2"
+            v-model="form.BirthPlace"
+            required
+            placeholder="Enter Birth Place"
+          ></b-form-input>
+        </b-form-group>
+
+        <b-form-group id="input-group-8" label="Height :" label-for="input-8">
+          <b-form-input
+            id="input-8"
+            v-model="form.Height"
+            required
+            placeholder="Enter Height"
+          ></b-form-input>
+        </b-form-group>
+
+        <b-form-group id="input-group-3" label="Date Of Birth :" label-for="input-3">
+          <b-form-input
             id="input-3"
-            v-model="form.Team"
+            v-model="form.Born"
+            required
+            placeholder="Enter Birth Date"
+          ></b-form-input>
+        </b-form-group>
+
+        <b-form-group id="input-group-4" label="Team:" label-for="input-4">
+          <b-form-select
+            id="input-4"
+            v-model="form.team"
             :options="['India','Australia']"
             placeholder= "enter Team"
             required
           ></b-form-select>
         </b-form-group>
 
-        <b-form-group id="input-group-4">
-          <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-            <b-form-checkbox value="me">Check me out</b-form-checkbox>
-            <b-form-checkbox value="that">Check that out</b-form-checkbox>
-          </b-form-checkbox-group>
+        <b-form-group id="input-group-5" label="Role:" label-for="input-5">
+          <b-form-select
+            id="input-5"
+            v-model="form.Role"
+            :options="['Bowler','Batsman','All Rounder', 'Wicket Keeper']"
+            placeholder= "enter Role"
+            required
+          ></b-form-select>
+        </b-form-group>
+
+        <b-form-group id="input-group-6" label="Batting Style:" label-for="input-6">
+          <b-form-select
+            id="input-6"
+            v-model="form.BattingStyle"
+            :options="['Right Handed Bat','Left Handed Bat']"
+            placeholder= "enter Batting Style"
+            required
+          ></b-form-select>
+        </b-form-group>
+
+        <b-form-group id="input-group-7" label="Bowling Style:" label-for="input-7">
+          <b-form-select
+            id="input-7"
+            v-model="form.BowlingStyle"
+            :options="['Right-arm fast','Right-arm medium-fast','Right-arm medium','Right-arm Offbreak','Right-arm Legbreak','Left-arm fast','Left-arm medium-fast','Left-arm medium','Left-arm Offbreak','Chinaman']"
+            placeholder= "enter Batting Style"
+            required
+          ></b-form-select>
         </b-form-group>
 
         <b-button type="submit" variant="primary">Submit</b-button>
@@ -46,9 +96,13 @@ export default {
     return {
       showTeamForm: false,
       form: {
-        name: '',
-        Team: '',
-        age: 12
+        Born: '',
+        BirthPlace: '',
+        Height: '',
+        Role: '',
+        BattingStyle: '',
+        BowlingStyle: '',
+        team: ''
       }
     }
   },

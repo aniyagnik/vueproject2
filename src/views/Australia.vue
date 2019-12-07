@@ -3,7 +3,7 @@
       <h1>Australian Players</h1>
     <b-table striped hover :items="AustralianPlayersSummary">
       <template v-slot:cell(name)="data">
-        <a :href="`/Player/Australia/${data.value}`">{{ data.value }}</a>
+        <router-link :to="`/Player/Australia/${data.value}`">{{ data.value }}</router-link>
       </template>
     </b-table>
   </div>
