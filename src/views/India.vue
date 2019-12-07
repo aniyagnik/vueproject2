@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>Indian Players</h1>
-    <b-table striped hover :items="India">
+    <b-table striped hover :items="IndianPlayersSummary">
       <template v-slot:cell(name)="data">
         <a :href="`/Player/India/${data.value}`">{{ data.value }}</a>
       </template>
@@ -10,16 +10,17 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   data () {
     return {}
   },
   computed: {
-    ...mapState([
-      'India'
+    ...mapGetters([
+      'IndianPlayersSummary'
     ])
+
   }
 }
 </script>
