@@ -1,5 +1,5 @@
 export default {
-  addCharacter: (context, newCharacter) => {
-    context.commit('appendCharacter', newCharacter)
+  addPlayer: (context, newPlayer) => {
+    context.commit('appendPlayer', newPlayer)
   }
 }

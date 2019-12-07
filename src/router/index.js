@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import Australia from '../views/Australia.vue'
 import India from '../views/India.vue'
 import Team from '../views/Team.vue'
-import Character from '../views/Character.vue'
+import Player from '../views/Player.vue'
 
 Vue.use(VueRouter)
 
@@ -30,9 +30,9 @@ const routes = [
     component: Team
   },
   {
-    path: '/Character/:Team/:name',
-    name: 'Character',
-    component: Character
+    path: '/Player/:Team/:name',
+    name: 'Player',
+    component: Player
   }
 ]
 

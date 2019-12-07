@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <h1> HOME </h1>
-    Total Number Of Players Registered : {{ characterCount }} <br>
-    <button class="btn btn-primary"  @click="toogleTeamForm">Add new Character</button> <br> <br><br><br>
+    Total Number Of Players Registered : {{ PlayerCount }} <br>
+    <button class="btn btn-primary"  @click="toogleTeamForm">Add new Player</button> <br> <br><br><br>
      <div>
       <b-form @submit.prevent="handleSubmit" @reset="handleReset" v-if="showTeamForm">
         <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
@@ -54,18 +54,18 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'characterCount'
+      'PlayerCount'
     ])
   },
   methods: {
     ...mapActions([
-      'addCharacter'
+      'addPlayer'
     ]),
     toogleTeamForm () {
       this.showTeamForm = !this.showTeamForm
     },
     handleSubmit () {
-      this.addCharacter(this.form)
+      this.addPlayer(this.form)
       this.form = {}
     },
     handleReset () {

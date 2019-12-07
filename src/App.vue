@@ -5,7 +5,7 @@
       <router-link to="/Team">Teams</router-link> |
       <router-link to="/India">India</router-link> |
       <router-link to="/Australia">Australia</router-link> |
-      <router-link to="/Character">Character</router-link>
+      <router-link to="/Player">Player</router-link>
     </div>
     <b-container>
       <router-view/>

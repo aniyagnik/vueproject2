@@ -1,5 +1,5 @@
 export default {
-  characterCount: (state) => {
+  PlayerCount: (state) => {
     return state.India.length + state.Australia.length
   }
 }

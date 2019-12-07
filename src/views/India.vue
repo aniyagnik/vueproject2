@@ -3,7 +3,7 @@
       <h1>Indian Players</h1>
     <b-table striped hover :items="India">
       <template v-slot:cell(name)="data">
-        <a :href="`/Character/India/${data.value}`">{{ data.value }}</a>
+        <a :href="`/Player/India/${data.value}`">{{ data.value }}</a>
       </template>
     </b-table>
   </div>

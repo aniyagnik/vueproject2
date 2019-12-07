@@ -1,5 +1,5 @@
 export default {
-  appendCharacter: (state, newCharacter) => {
-    state[newCharacter.Team].push(newCharacter)
+  appendPlayer: (state, newPlayer) => {
+    state[newPlayer.Team].push(newPlayer)
   }
 }
