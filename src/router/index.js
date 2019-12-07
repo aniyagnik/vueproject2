@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import DeathNote from '../views/DeathNote.vue'
-import DBZ from '../views/DBZ.vue'
-import Anime from '../views/Anime.vue'
+import Australia from '../views/Australia.vue'
+import India from '../views/India.vue'
+import Team from '../views/Team.vue'
 import Character from '../views/Character.vue'
 
 Vue.use(VueRouter)
@@ -15,22 +15,22 @@ const routes = [
     component: Home
   },
   {
-    path: '/DeathNote',
-    name: 'DeathNote',
-    component: DeathNote
+    path: '/Australia',
+    name: 'Australia',
+    component: Australia
   },
   {
-    path: '/DBZ',
-    name: 'DBZ',
-    component: DBZ
+    path: '/India',
+    name: 'India',
+    component: India
   },
   {
-    path: '/Anime',
-    name: 'Anime',
-    component: Anime
+    path: '/Team',
+    name: 'Team',
+    component: Team
   },
   {
-    path: '/Character/:anime/:name',
+    path: '/Character/:Team/:name',
     name: 'Character',
     component: Character
   }

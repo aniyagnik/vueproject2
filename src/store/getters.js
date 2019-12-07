@@ -1,5 +1,5 @@
 export default {
   characterCount: (state) => {
-    return state.DBZ.length + state.DeathNote.length
+    return state.India.length + state.Australia.length
   }
 }

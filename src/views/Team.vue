@@ -1,5 +1,5 @@
 <template>
     <div>
-        Anime
+        Teams
     </div>
 </template>

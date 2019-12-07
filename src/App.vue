@@ -2,9 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/Anime">Anime</router-link> |
-      <router-link to="/DBZ">DBZ</router-link> |
-      <router-link to="/DeathNote">DeathNote</router-link> |
+      <router-link to="/Team">Teams</router-link> |
+      <router-link to="/India">India</router-link> |
+      <router-link to="/Australia">Australia</router-link> |
       <router-link to="/Character">Character</router-link>
     </div>
     <b-container>

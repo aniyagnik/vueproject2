@@ -1,8 +1,8 @@
 <template>
     <div>
-       <h1>{{ animeCharacter.name }} from {{this.$route.params.anime}}</h1>
-       <p>Character's Age : {{ animeCharacter.age }}</p>
-       <p>{{ animeCharacter.last_name }}</p>
+       <h1>{{ TeamCharacter.name }} from {{this.$route.params.Team}}</h1>
+       <p>Character's Age : {{ TeamCharacter.age }}</p>
+       <p>{{ TeamCharacter.last_name }}</p>
     </div>
 </template>
 
@@ -12,18 +12,18 @@ import { mapState } from 'vuex'
 export default {
   data () {
     return {
-      animeCharacter: {}
+      TeamCharacter: {}
     }
   },
   computed: {
     ...mapState([
-      'DBZ',
-      'DeathNote'
+      'India',
+      'Australia'
     ])
   },
   mounted () {
-    const animeCharacter = this[this.$route.params.anime].find(({ name }) => name === this.$route.params.name)
-    this.animeCharacter = animeCharacter
+    const TeamCharacter = this[this.$route.params.Team].find(({ name }) => name === this.$route.params.name)
+    this.TeamCharacter = TeamCharacter
   }
 
 }

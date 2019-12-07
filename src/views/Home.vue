@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <h1> HOME </h1>
-    {{ characterCount }} <br>
-    <button class="btn btn-primary"  @click="toogleAnimeForm">Add new Character</button> <br> <br><br><br>
+    Total Number Of Players Registered : {{ characterCount }} <br>
+    <button class="btn btn-primary"  @click="toogleTeamForm">Add new Character</button> <br> <br><br><br>
      <div>
-      <b-form @submit.prevent="handleSubmit" @reset="handleReset" v-if="showAnimeForm">
+      <b-form @submit.prevent="handleSubmit" @reset="handleReset" v-if="showTeamForm">
         <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
           <b-form-input
             id="input-2"
@@ -14,12 +14,12 @@
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-3" label="Anime:" label-for="input-3">
+        <b-form-group id="input-group-3" label="Team:" label-for="input-3">
           <b-form-select
             id="input-3"
-            v-model="form.anime"
-            :options="['DBZ','DeathNote']"
-            placeholder= "enter anime"
+            v-model="form.Team"
+            :options="['India','Australia']"
+            placeholder= "enter Team"
             required
           ></b-form-select>
         </b-form-group>
@@ -44,10 +44,10 @@ export default {
   name: 'home',
   data () {
     return {
-      showAnimeForm: false,
+      showTeamForm: false,
       form: {
         name: '',
-        anime: '',
+        Team: '',
         age: 12
       }
     }
@@ -61,8 +61,8 @@ export default {
     ...mapActions([
       'addCharacter'
     ]),
-    toogleAnimeForm () {
-      this.showAnimeForm = !this.showAnimeForm
+    toogleTeamForm () {
+      this.showTeamForm = !this.showTeamForm
     },
     handleSubmit () {
       this.addCharacter(this.form)

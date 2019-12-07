@@ -1,7 +1,7 @@
-import DBZ from '../data/DBZ'
-import DeathNote from '../data/DeathNote'
+import India from '../data/India'
+import Australia from '../data/Australia'
 
 export default {
-  DBZ,
-  DeathNote
+  India,
+  Australia
 }

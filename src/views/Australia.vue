@@ -1,9 +1,9 @@
 <template>
   <div>
-      <h1>Death Note's Characters</h1>
-    <b-table striped hover :items="DeathNote">
+      <h1>Australian Players</h1>
+    <b-table striped hover :items="Australia">
       <template v-slot:cell(name)="data">
-        <a :href="`/Character/DeathNote/${data.value}`">{{ data.value }}</a>
+        <a :href="`/Character/Australia/${data.value}`">{{ data.value }}</a>
       </template>
     </b-table>
   </div>
@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     ...mapState([
-      'DeathNote'
+      'Australia'
     ])
   }
 }

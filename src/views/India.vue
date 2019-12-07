@@ -1,9 +1,9 @@
 <template>
   <div>
-      <h1>Dragon Ball Z's Characters</h1>
-    <b-table striped hover :items="DBZ">
+      <h1>Indian Players</h1>
+    <b-table striped hover :items="India">
       <template v-slot:cell(name)="data">
-        <a :href="`/Character/DBZ/${data.value}`">{{ data.value }}</a>
+        <a :href="`/Character/India/${data.value}`">{{ data.value }}</a>
       </template>
     </b-table>
   </div>
@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     ...mapState([
-      'DBZ'
+      'India'
     ])
   }
 }
